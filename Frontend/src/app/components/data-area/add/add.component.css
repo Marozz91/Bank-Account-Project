@@ -1,0 +1,20 @@
+form {
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: 1px solid lightblue;
+    border-radius: 10px;
+    padding: 30px;
+    margin: auto;
+    background: white;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}

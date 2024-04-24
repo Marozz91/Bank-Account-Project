@@ -1,0 +1,23 @@
+<div class="container">
+
+    <div class="formcss">
+
+        <form class="searchBox" (ngSubmit)="search()" ngNativeValidate>
+            <label>Account Number:</label>
+            <div class="input-group">
+                <input required title="Account Number" type="search" placeholder="Account Number" name="accountNumber"
+                    [(ngModel)]="accountNumber">
+                <button>search</button>
+            </div>
+        </form>
+
+    </div>
+
+    @for(a of account; track a._id){
+    <app-account-card [account]="a" />
+    }
+
+    @if(initSearch && !account?.length ) {
+    <h3>There is no account with this number</h3>
+    }
+</div>

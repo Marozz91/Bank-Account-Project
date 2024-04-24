@@ -1,0 +1,47 @@
+<form (ngSubmit)="save()" ngNativeValidate>
+
+    <h2>Add Account</h2>
+
+    <label>
+        <span>Account Number:</span>
+        <input required type="text" name="account-number" [(ngModel)]="account.accountNumber">
+    </label>
+
+    <label>
+        <span>Action Type:</span>
+        <select #actionType name="action-type" [(ngModel)]="account.typeOfAction" required>
+            <option value="">Please Select...</option>
+            <option value="withdrawal">Withdrawal</option>
+            <option value="deposit">Deposit</option>
+            <option value="loan">Loan</option>
+        </select>
+    </label>
+
+    <label>
+        <span>Amount:</span>
+        <input required type="number" name="amount" [(ngModel)]="account.amount">
+    </label>
+
+    <label>
+        <span>Date:</span>
+        <input required type="date" name="date" [(ngModel)]="account.date">
+    </label>
+
+
+    @if( actionType.value === "loan"){
+
+    <label>
+        <span>Interest:</span>
+        <input type="number" name="interest" [(ngModel)]="account.interest">
+    </label>
+
+    <label>
+        <span>Payments:</span>
+        <input type="text" name="payments" [(ngModel)]="account.payments">
+    </label>
+
+    }
+
+    <button>Save Account</button>
+
+</form>

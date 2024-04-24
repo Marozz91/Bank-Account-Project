@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
+}
+
+a {
+    text-decoration: unset;
+    color: brown;
+}
+
+p {
+    margin: 0;
+}
+
+.box {
+    background: white;
+    display: inline-block;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 0 black;
+    margin: 10px;
+    border: 1px solid gray;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+
+button {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+.ng-touched.ng-invalid:not(form) {
+    border-color: red;
+}
